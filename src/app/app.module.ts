@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MediaItemListComponent } from './component/media-item-list/media-item-list.component';
 import { MediaItemComponent } from './component/media-item/media-item.component';
+import { MediaItemEditFormComponent } from './component/media-item-edit-form/media-item-edit-form.component';
+import { NewMediaItemFormComponent } from './component/new-media-item-form/new-media-item-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MediaItemListComponent,
-    MediaItemComponent
+    MediaItemComponent,
+    MediaItemEditFormComponent,
+    NewMediaItemFormComponent
   ],
   imports: [
     BrowserModule,

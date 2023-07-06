@@ -1,0 +1,30 @@
+.card {
+    border: solid black 2px;
+    width: 250px;
+    padding: 0px 20px 20px;
+    margin: 20px;
+}
+
+label, legend {
+    font-size: 14px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+fieldset {
+    padding: 20px 50px;
+    border: solid black 2px;
+}
+
+#isFavorite {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.required:after {
+    content:" *";
+    color: red;
+}
