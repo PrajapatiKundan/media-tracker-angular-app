@@ -8,12 +8,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MediaItemService {
 
-  private ROOT_URL: string = 'http://localhost:8080';
+  private ROOT_URL: string = 'http://localhost:8080/media-tracker';
 
   constructor(private http: HttpClient) { }
 
   public getMediaItems(): Observable<MediaItem[]> {
-    return this.http.get<MediaItem[]>(`${this.ROOT_URL}/media-tracker/mediaitems`);
+    return this.http.get<MediaItem[]>(`${this.ROOT_URL}/mediaitems`);
   }
 
   public getMediaItem(id: number): Observable<MediaItem[]> {

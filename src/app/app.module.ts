@@ -8,6 +8,7 @@ import { MediaItemListComponent } from './component/media-item-list/media-item-l
 import { MediaItemComponent } from './component/media-item/media-item.component';
 import { MediaItemEditFormComponent } from './component/media-item-edit-form/media-item-edit-form.component';
 import { NewMediaItemFormComponent } from './component/new-media-item-form/new-media-item-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NewMediaItemFormComponent } from './component/new-media-item-form/new-m
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
