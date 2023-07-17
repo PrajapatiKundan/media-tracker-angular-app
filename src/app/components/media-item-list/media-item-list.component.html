@@ -1,0 +1,31 @@
+<header>
+  <input
+    type="text"
+    [formControl]="searchControl"
+    placeholder="Search..."
+    class="search"
+  />
+  <mw-category-list
+    *ngIf="mediaItems"
+    [categories]="mediaItems | categoryList"
+  ></mw-category-list>
+</header>
+
+<section>
+  <mw-media-item
+    *ngFor="let mediaItem of mediaItems | filter: searchText"
+    [mediaItem]="mediaItem"
+    [searchText]="searchText"
+    (delete)="onRemoveMediaItem($event)"
+    (favorite)="onToggleFavorite($event)"
+    (edit)="onEditMediaItem($event)"
+  ></mw-media-item>
+</section>
+
+<!-- <footer>
+  <a routerLink="/add">
+    <img class="icon" src="assets/01.png" />
+  </a>
+</footer> -->
+
+<ng-template mwModalPlaceholder></ng-template>

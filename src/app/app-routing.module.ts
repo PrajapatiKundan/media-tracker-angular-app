@@ -1,17 +1,21 @@
+import { MediaItemListComponent } from './components/media-item-list/media-item-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MediaItemListComponent } from './component/media-item-list/media-item-list.component';
-import { MediaItemEditFormComponent } from './component/media-item-edit-form/media-item-edit-form.component';
-import { NewMediaItemFormComponent } from './component/new-media-item-form/new-media-item-form.component';
+import { EditModalComponent } from './components/edit-modal/edit-modal.component';
 
 const routes: Routes = [
-  { path: 'edit', component: MediaItemEditFormComponent },
-  { path: 'add', component: NewMediaItemFormComponent },
-  { path: '', component: MediaItemListComponent }
+  {
+    path: 'add',
+    loadChildren: () =>
+      import('./new-item/new-item.module').then((m) => m.NewItemModule),
+  },
+  { path: 'edit', component: EditModalComponent },
+  { path: ':medium', component: MediaItemListComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'all' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'media-tracker-angular-app';
+  title = 'media-tracker-app';
 }
